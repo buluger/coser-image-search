@@ -1,0 +1,86 @@
+{
+ "cosplay1.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12587718",
+  "source": "https://x.com/PKEIIQ/status/2122955357349875887",
+  "size": 898124,
+  "artist_tag": "pkeiiq"
+ },
+ "cosplay2.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12586745",
+  "source": "https://x.com/asa_makudo/status/2123011700790374622",
+  "size": 504201,
+  "artist_tag": "hichi_(asa_makudo)"
+ },
+ "cosplay3.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12586706",
+  "source": "https://bsky.app/profile/did:plc:csl4fkgta42iagckx4x3iceb/post/3mgzxh3jvhc2m",
+  "size": 916574,
+  "artist_tag": "lobsteritus"
+ },
+ "cosplay4.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12586085",
+  "source": "https://x.com/hoyfi298676/status/2118791930373112042",
+  "size": 155275,
+  "artist_tag": "hoyfi298676"
+ },
+ "cosplay5.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12585670",
+  "source": "https://www.xiaohongshu.com/explore/67934810000000001800cf6d?xsec_token=CByKQsmgSyrVtFxXedIARIKhXSEFdJ7HXu0PfUTbis7Nw=",
+  "size": 172787,
+  "artist_tag": "bu_yao_lian_xu_dian_zan_duo_pian_wen_zhang"
+ },
+ "cosplay6.jpg": {
+  "kind": "cosplay",
+  "danbooru": "https://danbooru.donmai.us/posts/12584963",
+  "source": "https://x.com/sasabunecafe/status/1717468977700741583",
+  "size": 382408,
+  "artist_tag": "sasabunecafe"
+ },
+ "anime1.jpg": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587967",
+  "source": "https://x.com/liztora/status/2114364232468942926",
+  "size": 79173,
+  "artist_tag": "lily-an"
+ },
+ "anime2.png": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587966",
+  "source": "https://i.pximg.net/img-original/img/2025/05/24/01/49/53/130736451_p0.png",
+  "size": 2720783,
+  "artist_tag": "zhi_niao"
+ },
+ "anime3.jpg": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587964",
+  "source": "https://x.com/HoneXStage/status/2123693472788148709",
+  "size": 875050,
+  "artist_tag": "honexstage"
+ },
+ "anime4.png": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587960",
+  "source": "https://recommend.jr-central.co.jp/oshi-tabi/arknights/img/chara05_pc.png",
+  "size": 188111,
+  "artist_tag": "ruoganzhua"
+ },
+ "anime5.jpg": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587959",
+  "source": "https://x.com/yuuuuuara2525/status/2123703408020590746",
+  "size": 3239589,
+  "artist_tag": "yuara"
+ },
+ "anime6.png": {
+  "kind": "anime",
+  "danbooru": "https://danbooru.donmai.us/posts/12587956",
+  "source": "https://recommend.jr-central.co.jp/oshi-tabi/arknights/img/chara04_pc.png",
+  "size": 152865,
+  "artist_tag": "ruoganzhua"
+ }
+}

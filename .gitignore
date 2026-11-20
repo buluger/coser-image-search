@@ -1,0 +1,15 @@
+# 真配置里是 API key，永远别提交
+config.json
+config.json.bak*
+
+# 运行时产物
+state/
+node_modules/
+
+# 备份与临时文件
+*.bak
+*.bak-*
+*.bak.*
+*.bakfix-*
+*.orig
+_t_extract.mjs
