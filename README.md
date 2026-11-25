@@ -1,4 +1,8 @@
-# 鱼鱼找鸡 v1.3.1
+# 菲比找鸡 · coser-image-search v1.3.5
+
+> **这是定制版（薄壳 + Node 核心），不是社区版。**
+> 社区版是 ttlvip 的纯 Python 插件 [astrbot_plugin_fish_find_chicken](https://github.com/ttlvip/astrbot_plugin_fish_find_chicken)，命令 `/鱼鱼找鸡`；本项目是它的远端亲戚：同一个「以图搜源」目标，重写成了 Node 核心 + AstrBot 薄壳，命令 `/菲比找鸡`。
+> 两者可以装在同一个 AstrBot 里共存，互不影响（见第 10 节）。
 
 给一张图，反查这人是哪个 coser、账号在哪。
 
@@ -194,4 +198,56 @@ python3 bench/bench.py lens,saucenao,tracemoe,yandex cosplay1.jpg ... anime6.png
 
 ---
 
-版本 1.3.1 · 文件名 `coser-image-search`
+## 10. AstrBot 插件（菲比找鸡 · 定制薄壳）
+
+`astrbot_plugin/` 是把上面的 Node 核心接进 QQ 群 / Telegram / Discord 的薄壳，**不含任何识别逻辑**：
+
+```
+QQ 消息 → main.py 取图（含引用消息）→ node bin/fish.mjs <file> --json → 把 text 回出去
+```
+
+核心可独立升级、独立换目录（配置项 `core_path`），插件侧几乎没有可坏的地方。
+
+### 与社区版的区别
+
+| | 本项目（定制版） | 社区版 |
+|---|---|---|
+| 仓库 | 本仓库 `astrbot_plugin/` | [ttlvip/astrbot_plugin_fish_find_chicken](https://github.com/ttlvip/astrbot_plugin_fish_find_chicken) |
+| 结构 | AstrBot 薄壳 + Node 核心（`src/`） | 纯 Python，自带 CDP 浏览器驱动 |
+| 命令 | `/菲比找鸡` | `/鱼鱼找鸡`、`/找鸡`、`/coser`、`/反查` |
+| 引擎 | Lens / Yandex / SauceNAO / trace.moe / IQDB / 百度 + **收录站名字提示** | Lens / SauceNAO / trace.moe / IQDB |
+| 图床 | 自建图床（`FISH_SELF_HOST_BASE`），不依赖公共图床 | AstrBot 代理 / SerpApi |
+| 运行时 | Node ≥ 20 + 本机 Chrome/Edge | Python + chromium |
+| 附加 | 名字提示带收录页链接、`ENGINES_VERSION` 结果缓存 | `/找鸡自检`、`/找鸡重置浏览器` |
+
+两版**可以同时装**：插件名、命令、配置、数据目录全部错开。我第一次装社区版时被它整体覆盖了定制薄壳（同名目录），所以现在社区版一律改名叫 `astrbot_plugin_yuyu_fish`。
+
+### 安装
+
+```bash
+# 1) Node 核心
+mkdir -p /opt/fish-find-chicken
+cp -r src bin adapters bench config.example.json package.json /opt/fish-find-chicken/
+cd /opt/fish-find-chicken && cp config.example.json config.json   # 再填 serpApiKey / sauceNaoApiKey
+node bin/fish.mjs --check
+
+# 2) AstrBot 薄壳
+cp -r astrbot_plugin /opt/AstrBot/data/plugins/astrbot_plugin_fish_find_chicken
+
+# 3) 自建图床地址（不配的话 Lens / Yandex 拿不到公网 URL，只剩 SauceNAO）
+cat > /etc/systemd/system/astrbot.service.d/selfhost.conf <<'EOF'
+[Service]
+Environment=FISH_SELF_HOST_BASE=http://你的域名或IP
+EOF
+systemctl daemon-reload && systemctl restart astrbot
+```
+
+装完在群里**引用一张图**发 `/菲比找鸡`。
+
+### 薄壳配置项（`_conf_schema.json`）
+
+`engines`、`strict_consensus`、`max_accounts`、`engine_timeout`、`total_timeout`、`node_path`、`core_path`。
+
+---
+
+版本 1.3.5 · 仓库名 `coser-image-search` · AstrBot 插件名 `astrbot_plugin_fish_find_chicken`（命令 `/菲比找鸡`）

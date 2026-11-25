@@ -1,7 +1,7 @@
 {
   "name": "coser-image-search",
-  "version": "1.3.1",
-  "description": "给一张图反查 coser 的社媒账号（谷歌 Lens / Yandex / SauceNAO / trace.moe 多引擎）；可命令行用，也可接进 OneBot 机器人当指令",
+  "version": "1.3.5",
+  "description": "菲比找鸡（定制版）：给一张图反查 coser 的社媒账号（谷歌 Lens / Yandex / SauceNAO / trace.moe 多引擎），Node 核心 + AstrBot 薄壳；与社区版 ttlvip/astrbot_plugin_fish_find_chicken 区分",
   "type": "module",
   "bin": {
     "coser-image-search": "bin/fish.mjs"

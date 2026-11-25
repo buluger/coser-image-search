@@ -1,0 +1,41 @@
+{
+  "engines": {
+    "type": "string",
+    "description": "默认搜索引擎",
+    "hint": "逗号分隔，可选：lens, saucenao, iqdb, tracemoe, yandex, baidu。默认 lens+saucenao+tracemoe 已覆盖真人/二次元/动画截图（iqdb 常年排队，默认关）；yandex 噪声大，baidu 需服务器有 Chromium。",
+    "default": "lens,saucenao,tracemoe"
+  },
+  "strict_consensus": {
+    "type": "bool",
+    "description": "只报能确认的账号",
+    "hint": "开启时只保留「标题里出现同一个人名」的结果；关闭则宁可多报，自己挑。",
+    "default": true
+  },
+  "max_accounts": {
+    "type": "int",
+    "description": "最多报几个账号",
+    "default": 3
+  },
+  "engine_timeout": {
+    "type": "int",
+    "description": "单引擎超时（秒）",
+    "default": 30
+  },
+  "total_timeout": {
+    "type": "int",
+    "description": "整个搜索的超时（秒）",
+    "hint": "防止某个引擎卡住导致命令一直不回。",
+    "default": 150
+  },
+  "node_path": {
+    "type": "string",
+    "description": "node 可执行文件路径",
+    "default": "/usr/bin/node"
+  },
+  "core_path": {
+    "type": "string",
+    "description": "菲比找鸡核心入口",
+    "hint": "bin/fish.mjs 的绝对路径，默认 /opt/fish-find-chicken/bin/fish.mjs",
+    "default": "/opt/fish-find-chicken/bin/fish.mjs"
+  }
+}
